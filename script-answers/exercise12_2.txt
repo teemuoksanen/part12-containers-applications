@@ -1,0 +1,19 @@
+Script started on Tue Dec 28 23:37:06 2021
+Restored session: Tue Dec 28 23:36:06 EET 2021
+[1m[7m%[27m[1m[0m                                                                                ]7;file://KeepCalm/Volumes/Data/teemu/Git/Fullstack/part12-containers-applications[0m[27m[24m[Jteemu@KeepCalm part12-containers-applications % [K[?2004h[7mdocker container run -it ubuntu [7mb[7mash[27m[K[A[44C[27md[27mo[27mc[27mk[27me[27mr[27m [27mc[27mo[27mn[27mt[27ma[27mi[27mn[27me[27mr[27m [27mr[27mu[27mn[27m [27m-[27mi[27mt[27m [27mu[27mb[27mu[27mn[27mt[27mu[27m b[27ma[27ms[27mh[?2004l
+Unable to find image 'ubuntu:latest' locally
+latest: Pulling from library/ubuntu
+
+[1A[2K7b1a6ab2e44d: Pulling fs layer [1B[1A[2K7b1a6ab2e44d: Downloading  293.2kB/28.57MB[1B[1A[2K7b1a6ab2e44d: Downloading    883kB/28.57MB[1B[1A[2K7b1a6ab2e44d: Downloading  2.059MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Downloading  3.816MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Downloading  5.004MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Downloading  6.462MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Downloading  7.936MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Downloading  9.386MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Downloading  10.57MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Downloading  12.93MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Downloading  14.09MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Downloading  16.16MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Downloading  17.92MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Downloading  19.68MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Downloading  21.74MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Downloading  23.22MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Downloading  24.98MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Downloading  26.46MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Download complete [1B[1A[2K7b1a6ab2e44d: Extracting  294.9kB/28.57MB[1B[1A[2K7b1a6ab2e44d: Extracting  2.654MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Extracting  4.719MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Extracting  6.488MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Extracting  7.963MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Extracting  9.437MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Extracting  10.91MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Extracting  12.98MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Extracting  15.63MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Extracting  18.58MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Extracting  20.94MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Extracting   23.3MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Extracting  24.18MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Extracting  25.66MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Extracting  27.13MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Extracting  28.31MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Extracting  28.57MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Pull complete [1BDigest: sha256:626ffe58f6e7566e00254b638eb7e0f3b11d4da9675088f4781a50ae288f3322
+Status: Downloaded newer image for ubuntu:latest
+]0;root@6f27cf832aa9: /root@6f27cf832aa9:/# [K]0;root@6f27cf832aa9: /root@6f27cf832aa9:/# mkdir /usr/src/app
+]0;root@6f27cf832aa9: /root@6f27cf832aa9:/# touch /usr/src/app/index.js
+]0;root@6f27cf832aa9: /root@6f27cf832aa9:/# [Kexit
+exit
+[1m[7m%[27m[1m[0m                                                                                ]7;file://KeepCalm/Volumes/Data/teemu/Git/Fullstack/part12-containers-applications[0m[27m[24m[Jteemu@KeepCalm part12-containers-applications % [K[?2004heexit[?2004l
+
+Saving session...
+...saving history...truncating history files...
+...completed.
+
+Script done on Tue Dec 28 23:39:03 2021
