@@ -1,0 +1,63 @@
+Script started on Wed Dec 29 23:33:26 2021
+Restored session: Wed Dec 29 23:33:16 EET 2021
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                           ]7;file://KeepCalm/Volumes/Data/teemu/Git/Fullstack/part12-containers-applications/todo-app/todo-backend[0m[27m[24m[Jteemu@KeepCalm todo-backend % [K[?2004hddocker container ls[?2004l
+CONTAINER ID   IMAGE     COMMAND                  CREATED             STATUS         PORTS                     NAMES
+1dfc43ba661d   nginx     "/docker-entrypoint.…"   6 minutes ago       Up 6 minutes   0.0.0.0:8080->80/tcp      adoring_burnell
+3e46ac767479   mongo     "docker-entrypoint.s…"   About an hour ago   Up 2 minutes   0.0.0.0:3456->27017/tcp   todo-backend_mongo_1
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                           ]7;file://KeepCalm/Volumes/Data/teemu/Git/Fullstack/part12-containers-applications/todo-app/todo-backend[0m[27m[24m[Jteemu@KeepCalm todo-backend % [K[?2004hddocker exec -it todo-backend_mongo_1 mongo [7m-u root -p example[27m[18D[27m-[27mu[27m [27mr[27mo[27mo[27mt[27m [27m-[27mp[27m [27me[27mx[27ma[27mm[27mp[27ml[27me[?2004l
+MongoDB shell version v5.0.5
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("175f8a5a-1e25-46ff-864a-cb9e806cd096") }
+MongoDB server version: 5.0.5
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+---
+The server generated these startup warnings when booting: 
+        2021-12-29T21:30:49.450+00:00: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> show dbs[3G[Jshow dbs[11G
+admin         0.000GB
+config        0.000GB
+local         0.000GB
+the_database  0.000GB
+> use the_database[3G[Juse the_database[19G
+switched to db the_database
+> show collections[3G[Jshow collections[19G
+todos
+> db.todos.find({})[3G[Jdb.todos.find({})[20G
+{ "_id" : ObjectId("61ccbe0cbcd931d9269ea3be"), "text" : "Write code", "done" : true }
+{ "_id" : ObjectId("61ccbe0cbcd931d9269ea3bf"), "text" : "Learn about containers", "done" : false }
+> dv.[3G[Jdv[5G[3G[Jd[4Gb.collection.[3G[Jdb.collection[16G[3G[Jdb.collectio[15G[3G[Jdb.collecti[14G[3G[Jdb.collect[13G[3G[Jdb.collec[12G[3G[Jdb.colle[11G[3G[Jdb.coll[10G[3G[Jdb.col[9G[3G[Jdb.co[8G[3G[Jdb.c[7G[3G[Jdb.[6G[3G[Jdb[5G.todos.insertOne([[3G[Jdb.todos.insertOne([22G|[3G[Jdb.todos.insertOne([22G[[3G[Jdb.todos.insertOne([22G{tac[3G[Jdb.todos.insertOne({ta[25G[3G[Jdb.todos.insertOne({t[24G[3G[Jdb.todos.insertOne({[23G"text":"[3G[Jdb.todos.insertOne({"text":[30G"Increase the number of tools in my toolbelt", "done":false})[3G[Jdb.todos.insertOne({"text":"Increase the number of tools in my toolbelt", "done":false})[91G
+{
+	"acknowledged" : true,
+	"insertedId" : ObjectId("61ccd4de993ce25dc2f92cd3")
+}
+> [3G[Jdb.todos.insertOne({"text":"Increase the number of tools in my toolbelt", "done":false})[91G[3G[Jdb.todos.find({})[20G[3G[Jdb.todos.find({})[20G
+{ "_id" : ObjectId("61ccbe0cbcd931d9269ea3be"), "text" : "Write code", "done" : true }
+{ "_id" : ObjectId("61ccbe0cbcd931d9269ea3bf"), "text" : "Learn about containers", "done" : false }
+{ "_id" : ObjectId("61ccd4de993ce25dc2f92cd3"), "text" : "Increase the number of tools in my toolbelt", "done" : false }
+> exit[3G[Jexit[7G
+bye
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                           ]7;file://KeepCalm/Volumes/Data/teemu/Git/Fullstack/part12-containers-applications/todo-app/todo-backend[0m[27m[24m[Jteemu@KeepCalm todo-backend % [K[?2004hdocker exec -it todo-backend_mongo_1 mongo -u root -p example[54Dcontainer ls                                          [42D[19Dexit               [15Ddocker exec -it todo-backend_mongo_1 mongo[35Dcontainer ls                       [23D[19Dexit               [15Ddocker start -i clever_hertz[28Dexit                        [24Ddocker start -i clever_hertz[28Dexit                        [24Ddocker container run -it ubuntu bash[36Dexit                                [32Dstopecho "hello"[12Dnpm start   installcache clean -force[18Dinstall           [11Dstart  [9Decho "hello"[12Dnpm start   [9Decho "hello"[12Dstop        [8Decho "hello"[12Dnpm start   installcache clean -force—[5C[18Dstart             [13D[9Dsudo rm -rf /tmp/metro-*[24D[5P[19C     [19Dnpm start --reset-cache[19Dinstall            [12D[11Dwatchman watch-del-all[22Dnpm start             [13Dinstallstart  installstart  [9Dwatchman watch-del-all[22Dnpm install           [11Dstart --reset-cache[23Drm -rf /tmp/metro-*    [19Dsudo rm -rf /tmp/metro-*[24Dnpm start               [15Dcache clean —force-[5C[18Dinstall           [11Dstart  [9Decho "hello"[12Dstop        [8Dexitdocker container run -it ubuntu bash[36Dexit                                [32Ddocker start -i clever_hertz[28Dexit                        [24Ddocker start -i clever_hertz[28Dexit                        [24Ddocker container ls[12Dexec -it todo-backend_mongo_1 mongo[42Dexit                                      [38Ddocker container ls[12Dexec -it todo-backend_mongo_1 mongo -u root -p example[61D                                                             [61Ddocker exec -it todo-backend_mongo_1 mongo -u root -p example[54Dcontainer ls                                          [42D[19Dexit               [15Ddocker exec -it todo-backend_mongo_1 mongo[35Dcontainer ls                       [23D[12Dexec -it todo-backend_mongo_1 mongo[35Dcontainer ls                       [23D[19Dexit               [15Ddocker start -i clever_hertz[28Dexit                        [24Ddocker start -i clever_hertz[28Dexit                        [24Ddocker start -i clever_hertz[28Dexit                        [24Ddocker start -i clever_hertz[28Dexit                        [24Ddocker container ls[12Dexec -it todo-backend_mongo_1 mongo[42Dexit                                      [38Ddocker container ls[12Dexec -it todo-backend_mongo_1 mongo -u root -p example[61D                                                             [61Deexit[?2004l
+
+Saving session...
+...saving history...truncating history files...
+...completed.
+
+Script done on Wed Dec 29 23:38:53 2021
