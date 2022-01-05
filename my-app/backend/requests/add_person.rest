@@ -1,0 +1,7 @@
+POST https://fathomless-caverns-92413.herokuapp.com/api/persons/
+Content-Type: application/json
+
+{
+    "name": "Kikka Kolmonen",
+    "number": "0500-123123"
+}
