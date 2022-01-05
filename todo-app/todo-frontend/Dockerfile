@@ -1,4 +1,4 @@
-FROM node:16 AS test
+FROM node:16 AS base
 
 USER node
   
@@ -6,12 +6,18 @@ WORKDIR /usr/src/app
 
 COPY --chown=node:node . .
 
-RUN npm ci
+RUN npm install
 
 RUN CI=true npm run test
 
-FROM test AS build
+FROM base AS build
 
-ENV REACT_APP_BACKEND_URL=http://localhost:3000
+COPY --from=base . .
 
-CMD npm start
+ENV REACT_APP_BACKEND_URL=/api/
+
+CMD npm run build
+
+FROM nginx:1.20-alpine AS deploy
+
+COPY --from=build /usr/src/app/build /usr/share/nginx/html
