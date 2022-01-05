@@ -1,11 +1,13 @@
 FROM node:16
+
+USER node
   
 WORKDIR /usr/src/app
 
-COPY . .
+COPY --chown=node:node . .
 
-RUN npm install
+RUN npm ci
 
 ENV DEBUG=phone-backend:*
 
-CMD ["npm", "start"]
+CMD npm start

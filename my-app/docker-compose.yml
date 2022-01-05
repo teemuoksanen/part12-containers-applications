@@ -2,20 +2,20 @@ version: '3.8'
 
 services:
   app:
-    image: phone-frontend-dev
+    image: phone-frontend
     build:
       context: ./frontend
-      dockerfile: dev.Dockerfile
+      dockerfile: Dockerfile
     volumes:
       - ./frontend/:/usr/src/app
     ports:
-      - 3000:3000
-    container_name: phone-frontend-dev
+      - 3000:80
+    container_name: phone-frontend
   server:
-    image: phone-backend-dev
+    image: phone-backend
     build:
       context: ./backend
-      dockerfile: dev.Dockerfile
+      dockerfile: Dockerfile
     volumes:
       - ./backend/:/usr/src/app
     ports:
@@ -23,11 +23,11 @@ services:
     environment: 
       - MONGODB_URI=mongodb+srv://teemuo-fullstack:<password>@cluster0.pufz2.mongodb.net/phonebook?retryWrites=true
       - PORT=3001
-    container_name: phone-backend-dev
+    container_name: phone-backend
   nginx:
     image: nginx:1.20.1
     volumes:
-      - ./nginx.dev.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
     ports:
       - 8080:80
-    container_name: reverse-proxy-dev
+    container_name: phone-reverse-proxy
